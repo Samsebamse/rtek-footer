@@ -5,7 +5,7 @@
 
 class RTekFooter extends HTMLElement {
   static get observedAttributes() {
-    return ['company', 'founded', 'facebook', 'instagram', 'x', 'snapchat', 'linkedin', 'developer', 'developer-url', 'align'];
+    return ['company', 'founded', 'facebook', 'instagram', 'x', 'snapchat', 'linkedin', 'developer', 'developer-url', 'align', 'color', 'font-size'];
   }
 
   constructor() {
@@ -64,6 +64,14 @@ class RTekFooter extends HTMLElement {
     return 'center';
   }
 
+  get color() {
+    return this.getAttribute('color') || '';
+  }
+
+  get fontSize() {
+    return this.getAttribute('font-size') || '';
+  }
+
   render() {
     const currentYear = new Date().getFullYear();
     const yearRange = !this.founded || this.founded === String(currentYear)
@@ -92,7 +100,8 @@ class RTekFooter extends HTMLElement {
         :host {
           display: block;
           font-family: inherit;
-          color: inherit;
+          color: ${this.color || 'inherit'};
+          ${this.fontSize ? `font-size: ${this.fontSize};` : ''}
           padding: 0;
           margin: 0;
         }

@@ -42,6 +42,8 @@ The component inherits `font-family`, `color`, and `background` from its parent 
 | `developer` | Developer/agency name | `"r-TEK"` |
 | `developer-url` | Developer website URL | `"https://r-tek.io"` |
 | `align` | Content alignment: `start`, `center`, `end` | `"center"` |
+| `color` | Text color (overrides inherited) | `"#ffffff"` |
+| `font-size` | Font size | `"0.875rem"` |
 
 ## Examples
 
