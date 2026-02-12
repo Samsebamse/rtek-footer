@@ -275,9 +275,12 @@ class RTekFooter extends HTMLElement {
                 }
 
                 .contact h3 {
+                    display: flex;
+                    padding-left: 2rem;
                 }
 
                 .hours h3 {
+                    display: flex;
                 }
 
                 /* --- Brand --- */
@@ -443,7 +446,7 @@ class RTekFooter extends HTMLElement {
 
                     .brand {
                         max-width: 100%;
-                        padding-right: 0;
+                        padding: 0 1.5rem;
                     }
 
                     .brand-logo {
