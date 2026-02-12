@@ -7,7 +7,7 @@ A lightweight, customizable footer web component with optional brand, contact, h
 ### CDN (Recommended)
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/Samsebamse/rtek-footer@main/src/rtek-footer.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/Samsebamse/rtek_footer@main/src/rtek-footer.js"></script>
 ```
 
 ## Usage
