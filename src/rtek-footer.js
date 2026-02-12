@@ -129,7 +129,7 @@ class RTekFooter extends HTMLElement {
 
     get gridColumns() {
         const cols = [];
-        if (this.hasBrand) cols.push("1.5fr");
+        if (this.hasBrand) cols.push("1fr");
         if (this.hasContact) cols.push("1fr");
         if (this.hasHours) cols.push("1fr");
         return cols.join(" ");
@@ -255,11 +255,11 @@ class RTekFooter extends HTMLElement {
 
                 /* --- Grid --- */
                 .grid {
-                    max-width: 87.5rem;
+                    max-width: 75rem;
                     margin: 3rem auto;
                     display: grid;
                     grid-template-columns: ${this.gridColumns};
-                    gap: 4rem;
+                    gap: 3rem;
                     align-items: start;
                 }
 
@@ -279,7 +279,7 @@ class RTekFooter extends HTMLElement {
                 }
 
                 /* --- Brand --- */
-                .brand { max-width: 18.75rem; }
+                .brand { max-width: 22rem; }
 
                 .brand-logo {
                     display: block;
