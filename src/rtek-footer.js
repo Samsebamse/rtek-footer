@@ -274,14 +274,16 @@ class RTekFooter extends HTMLElement {
                     margin: 0 0 1.5rem 0;
                 }
 
-                .contact h3,
-                .hours h3 {
+                .contact h3 {
                     display: flex;
                     padding-left: 2rem;
                 }
 
+                .hours h3 {
+                    display: flex;
+                }
+
                 /* --- Brand --- */
-                .brand { max-width: 22rem; }
 
                 .brand-logo {
                     display: block;
