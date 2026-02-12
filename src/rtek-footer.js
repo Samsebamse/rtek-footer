@@ -41,18 +41,28 @@ class RTekFooter extends HTMLElement {
         this.render();
     }
 
-    // --- Attribute getters ---------------------------------------------------
+    // --- Attribute getters/setters -------------------------------------------
+    // Setters are required so Vue 3 (which sets DOM properties instead of
+    // attributes when a matching property exists) correctly triggers
+    // attributeChangedCallback → render().
 
     get company()      { return this.getAttribute("company") || ""; }
+    set company(v)     { this.setAttribute("company", v); }
     get founded()      { return this.getAttribute("founded") || ""; }
+    set founded(v)     { this.setAttribute("founded", v); }
     get logo()         { return this.getAttribute("logo") || ""; }
+    set logo(v)        { this.setAttribute("logo", v); }
     get logoHeight()   { return this.getAttribute("logo-height") || "6rem"; }
     get tagline()      { return this.getAttribute("tagline") || ""; }
+    set tagline(v)     { this.setAttribute("tagline", v); }
 
     get contactTitle() { return this.getAttribute("contact-title") || ""; }
     get phone()        { return this.getAttribute("phone") || ""; }
+    set phone(v)       { this.setAttribute("phone", v); }
     get email()        { return this.getAttribute("email") || ""; }
+    set email(v)       { this.setAttribute("email", v); }
     get address()      { return this.getAttribute("address") || ""; }
+    set address(v)     { this.setAttribute("address", v); }
     get addressUrl()   { return this.getAttribute("address-url") || ""; }
 
     get hoursTitle()   { return this.getAttribute("hours-title") || ""; }
@@ -63,14 +73,22 @@ class RTekFooter extends HTMLElement {
     }
 
     get facebook()     { return this.getAttribute("facebook") || ""; }
+    set facebook(v)    { this.setAttribute("facebook", v); }
     get instagram()    { return this.getAttribute("instagram") || ""; }
+    set instagram(v)   { this.setAttribute("instagram", v); }
     get tiktok()       { return this.getAttribute("tiktok") || ""; }
+    set tiktok(v)      { this.setAttribute("tiktok", v); }
     get x()            { return this.getAttribute("x") || ""; }
+    set x(v)           { this.setAttribute("x", v); }
     get snapchat()     { return this.getAttribute("snapchat") || ""; }
+    set snapchat(v)    { this.setAttribute("snapchat", v); }
     get linkedin()     { return this.getAttribute("linkedin") || ""; }
+    set linkedin(v)    { this.setAttribute("linkedin", v); }
     get whatsapp()     { return this.getAttribute("whatsapp") || ""; }
+    set whatsapp(v)    { this.setAttribute("whatsapp", v); }
 
     get developer()    { return this.getAttribute("developer") || ""; }
+    set developer(v)   { this.setAttribute("developer", v); }
     get developerUrl() { return this.getAttribute("developer-url") || ""; }
 
     get align() {
@@ -79,11 +97,14 @@ class RTekFooter extends HTMLElement {
         if (val === "end" || val === "right") return "flex-end";
         return "center";
     }
+    set align(v)       { this.setAttribute("align", v); }
 
     get color()        { return this.getAttribute("color") || ""; }
+    set color(v)       { this.setAttribute("color", v); }
     get fontSize()     { return this.getAttribute("font-size") || ""; }
     get socialGap()    { return this.getAttribute("social-gap") || "2rem"; }
     get gap()          { return this.getAttribute("gap") || "0.5rem"; }
+    set gap(v)         { this.setAttribute("gap", v); }
     get bgColor()      { return this.getAttribute("bg-color") || ""; }
     get accentColor()  { return this.getAttribute("accent-color") || ""; }
     get borderColor()  { return this.getAttribute("border-color") || ""; }
